@@ -37,27 +37,10 @@
             border-radius: 5px;
             border: 1px solid #0000ff;
             border-style: solid;
+            margin-bottom: 20px;
         }
-        .login-container input:hover{
-            border: 1px solid #FF4500;
-            cursor: pointer;
-        }
-        .loginbutton {
-         margin: 15px 0px;
-         width: 20%;
-         justify-content: center;
-         border-radius: 20px;
-         border-color: #0000ff;
-         background-color: #0000ff;
-         color: #ffffff;
-         border: none;
-        }
-        button:hover{
-            cursor: pointer;
-            background-color: #FF4500;
-            border: none;
-            box-shadow: 0 0 10px #000;
-        }
+        
+      
         .psw >a {
             color: #FF4500;
             text-decoration: none;
@@ -124,14 +107,14 @@
 
     <section>
         <form class="loginForm"method="post">      
-            <div class="login-container">
+            <div class="login-container container">
               <label class="username" for="username"><b>Username</b></label>
-              <input type="text"id=username name="username" required>
+              <input type="text"id=username name="username" placeholder = "R123" required>
           
               <label for="psw"><b>Password</b></label>
               <input type="password" id="EnterPassword" name="password" required>
           
-              <button class="loginbutton" type="submit">Login</button>
+              <button class="btn btn-primary btn-primary:hover" type="submit">Login</button>
               
               <label>
                 <input type="checkbox" checked="checked" name="remember"> Remember me
