@@ -1,26 +1,3 @@
-styleMay11.css
-Who has access
-J
-E
-H
-S
-System properties
-Type
-Style Sheet
-Size
-39 KB
-Storage used
-39 KB
-Location
-SGUP
-Owner
-Jane Sicat
-Modified
-May 11, 2022 by Jane Sicat
-Created
-May 11, 2022
-Add a description
-Viewers can download
 *,
 *::before,
 *::after {
@@ -2135,3 +2112,189 @@ margin-bottom: 1.5rem;
   color: #000000;
   cursor: pointer;
 }
+
+
+
+
+
+
+
+/* About us page */
+.red {
+  color: rgb(219, 66, 5);
+  font-weight: 800;
+  font-size: 22px;
+}
+
+.btn-abt {
+    background-color: rgb(219, 66, 5);
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    padding: 10px;
+    border: none;
+}
+
+.btn-abt:hover {
+    color: #FFF;
+    background-color: rgba(219, 66, 5, 0.726);
+}
+
+.para {
+      color: #666;
+}
+
+/* About Us Section */
+.aboutus-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/aboutus/aboutus-banner2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    display: block;
+}
+
+.aboutus-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.aboutus-banner h1 {
+    font-weight: 800;
+    font-size: 70px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.aboutus-main {
+    margin-top: 20px;
+}
+
+.aboutus-para {
+    padding-left: 50px;
+}
+
+
+
+/* Our Assurance */
+.picture-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/aboutus/picture-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    min-height: 400px;
+    height: auto;
+    display: block;
+    background-attachment: fixed;
+    margin-top: 90px;
+}
+
+.whyus {
+    margin-top: 20px;
+}
+
+/* Teams */
+.teams {
+    background-color: #ffffffe5;
+    margin-top: 80px;
+    border: rgba(219, 66, 5, 0.2) 2px solid;
+}
+
+.teams img {
+    object-fit: cover;
+    height: 200px;
+    width: 200px;
+}
+
+.img-thumbnail {
+    padding: .25rem;
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+    max-width: 100%;
+    height: auto;
+}
+
+.social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    text-decoration: none;
+}
+
+
+/* Subscribe Section */
+.subscribe-banner {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/images/aboutus/subscribe-banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    width: 100%;
+    min-height: 300px;
+    display: block;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    margin-top: 80px;
+}
+
+.subscribe > p {
+    font-family: 'Ms Madi', cursive;
+    font-size: 70px;
+    color: rgba(255, 165, 130);
+}
+
+@media (max-width: 767px) {
+    /* Top Banner */   
+    .header-container.container-fluid .row-fluid .page-center {
+    padding: 0;
+    }
+
+    .custom-banner-image .banner-text {
+    padding: 50px 15px;
+    }
+
+    .aboutus-text > p {
+        display: none;
+    }
+
+    .aboutus-main {
+        text-align: center;
+    }
+
+    .aboutus-para {
+        padding-left: 0px;
+    }
+
+    .picture-banner p {
+        display: none;
+    }
+
+    .picture-banner h1 {
+        font-size: 40px;
+    }
+    .subscribe-banner {
+        height: 450px;
+    }
+}
+/* End for about page */
