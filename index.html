@@ -1,111 +1,313 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
-    <link type="text/css" rel="stylesheet" href="/css/u.css">
-    <title>Ubento</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+ 
+  <link type="text/css" rel="stylesheet" href="/css/style.css">
+  <title>Ubento</title>
 </head>
+
 <body>
-    <!-- Start of Header -->
-    <header>
-        <div class="container">
-          <nav class="navbar navbar-expand-md no-gutters">
-            <div class="col-2 text-left">
-              <a href="#">
-                <img src="images/ubento-logo-borderless.svg" height="50" alt="image">
-              </a>
-            </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse justify-content-center col-md-8 navbar-collapse-1">
-              <ul class="navbar-nav justify-content-center">
-                <li class="nav-item active">
-                  <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/bentos.html">Bentos</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/about.html">About Us</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contact.html">Contact</a>
-                </li>
-              </ul>
-            </div>
-      
-            <div class="collapse navbar-collapse justify-content-end col-md-2 navbar-collapse-1">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="/login.html">Log In <i class="fas fa-sign-in-alt"></i></a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+  <!-- Start of Header -->
+  <header style="background-color: #FFBF00;">
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+            <img src="images/ubento-logo-borderless.svg" height="50" alt="ubento-logo">
+          </a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bentos.html">Bentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-person-fill"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-cart-fill"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </header>
-<!-- ENd of Header -->
-<!-- Start of Banner -->
-<section class="ubo-block">
-    <div class="container" style="background-image: url(/images/hero-bg-light.svg); background-size: cover;">
-      <div class="row align-items-center">
-        <div class="col-10 col-sm-6 m-auto col-md-4 pb-4 pb-md-0">
-          <img alt="image" class="img-fluid rounded-0" src="images/virtualMeal.svg">
-        </div>
-        <div class="col-12 ml-auto col-md-6 col-lg-5">
-          <h1>Never settle for less</h1>
-          <p class="lead">Quisque sed turpis sit amet diam iaculis fermentum sed eu elit. Vivamus vestibulum dui eget urna dapibus, eget scelerisque justo fringilla. Nam semper sem eu lorem finibus sollicitudin. </p>
-          <p><a class="btn btn-primary mt-4 mb-5 mb-md-0" href="#">Try Now</a></p>
+      </nav>
+    </div>
+  </header>
+  <!-- ENd of Header -->
+  <!-- Start of CTA Banner -->
+  <section class="ubo-block" style="background-image: url(images/hero.png);">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6 text-center">
+          <h1>Not <span class="hero-highlight">Ure</span><br>normal Bento</h1>
+          <p>
+            Get variety every single time,<br>
+            for every single palette, diet...<br>
+            not to mention for every macros.
+          </p>
+          <p class="mt-5 mt-sm-4">
+            <a class="btn btn-primary" href="#">GET YOURS</a>
+          </p>
         </div>
       </div>
     </div>
+    <img src="images/bannerbottomwave.svg" style="width: 100%; margin-bottom: -120px; display: block;">
   </section>
   <!-- End of banner -->
   <!-- Value Proposition section -->
+  <section class="ubo-block">
+    <div class="container">
+      <div class="row text-left mt-5">
+        <div class="col-12 col-md-4">
+          <div class="row">
+            <div class="col-3">
+              <img alt="image" class="ubo-icon" src="images/icons/variety.svg" height="40%">
+            </div>
+            <div class="col-9">
+              <h3><strong>Lotsa variety</strong></h3>
+              <p>No prepping, no overthing, no worrying. Get bentos for every pallete, every diet.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 pt-3 pt-sm-4 pt-md-0">
+          <div class="row">
+            <div class="col-3">
+              <img alt="image" class="ubo-icon" src="images/icons/healthy.svg" height="50%">
+            </div>
+            <div class="col-9">
+              <h3><strong>Always healthy</strong></h3>
+              <p>Even the all-powerful Pointing has no control about the blind texts.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 pt-3 pt-sm-4 pt-md-0">
+          <div class="row">
+            <div class="col-3">
+              <img alt="image" class="ubo-icon" src="images/icons/eco.svg" height="50%">
+            </div>
+            <div class="col-9">
+              <h3><strong>Eco-friendly</strong></h3>
+              <p>A small river named Duden flows by their place and supplies it</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Value Proposition Section -->
+
+  <!-- Product Features -->
+  <section class="ubo-block">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 text-left">
+          <h1>Top Sellers</h1>
+          <p class="lead">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. In
+            particular, the garbled words of lorem ipsum bear an unmistakable resemblance to sections.</p>
+          <p class="lead"><a href="#">See all bentos <i class="fas fa-angle-right"></i></a>
+        </div>
+      </div>
+
+      <div class="row text-left mt-5">
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0">
+          <img alt="image" class="img-fluid rounded" src="images/bestsellers_1.png">
+          <h3><strong>Bento One</strong></h3>
+          <p>Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get
+            your own, or read on for the authoritative history of lorem ipsum.</p>
+        </div>
+
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0">
+          <img alt="image" class="img-fluid rounded" src="images/bestsellers_2.png">
+          <h3><strong>Bento Two</strong></h3>
+          <p> The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.)
+            that doesn't distract from the layout.</p>
+        </div>
+
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0">
+          <img alt="image" class="img-fluid rounded" src="images/bestsellers_3.png">
+          <h3><strong>Bento Three</strong></h3>
+          <p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer
+            sheets, and again during the 90s as desktop publishers. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Product Features -->
+
+  <!-- Start of Bento Component Highlights -->
+  <section class="ubo-block">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 mb-4 mb-md-0">
+          <img alt="image" class="img-fluid" src="images/anymeal.gif">
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 ml-md-auto text-left">
+          <h1>More variety, nutrient dense</h1>
+          <p class="lead">McClintock's eye for detail certainly helped narrow the whereabouts of lorem ipsum's origin,
+            however, the “how and when” still remain something of a mystery, with competing theories and timelines.</p>
+          <p><a class="btn btn-primary" href="#">Choose Urs</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Endof Bento Component Highlights -->
+  <!-- Start of Ingredient Highlights -->
+  <section class="ubo-block" style="background-color: #fbe5a3;">
+    <img src="images/wave2.svg" alt="wave2" style="margin: -120px 0px; width: 100%; position: absolute;">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 col-lg-5">
+          <h1>Fresh ingredients, always</h1>
+          <p class="lead">So how did the classical Latin become so incoherent? According to McClintock, a 15th century
+            typesetter likely scrambled part of Cicero's De Finibus in order to provide placeholder text to mockup
+            various fonts for a type specimen book.
+
+          </p>
+        </div>
+        <div class="col-12 col-md-6 ml-md-auto mt-4 mt-md-0">
+          <img alt="image" class="img-fluid" src="images/ingredientshero.png">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Ingredient Highlights-->
+  <!-- Start of Preparation Highlight -->
+  <section class="ubo-block"
+    style="background-image: url(images/prepherophoto.svg); background-color: #fbe5a3; background-position: top; margin-top: -150px 0px;">
+    <div class="container">
+      <div class="row justify-content-center pb-xl-5">
+        <div class="row text-right align-items-center-lg align-items-end pt-5">
+          <div class="col-7 col-sm-4 m-auto mb-md-0 mt-md-0 m-lg-auto">
+            <!-- <img alt="image" class="img-fluid" id="prepHero" src="images/prepPhoto.svg" style="margin: 0px; padding: 0px"> -->
+          </div>
+          <div class="col-12 col-md-7 col-lg-6 col-xl-5 m-auto text-left pt-5 pt-md-0">
+            <div class="col-12 text-left">
+              <h1>      
+                <span  class="hero-highlight">Gracious</span>
+                <br>
+                <span class="hero-highlight">preparation</span>
+              </h1>
+            </div>
+            <br>
+            <br>
+            <br>
+            <h3><strong>Step One</strong></h3>
+            <p>Nick Richardson described the translation “like extreme Mallarmé, or a Burroughsian cut-up, or a
+              paragraph of Finnegans Wake.</p>
+
+            <h3 class="mt-4 mt-xl-5"><strong>Step Two</strong></h3>
+            <p>The decade that brought us Star Trek and Doctor Who also resurrected Cicero—or at least what used to be
+              Cicero—in an attempt to make the days before computerized design a little less painstaking.</p>
+
+            <h3 class="mt-4 mt-xl-5"><strong>Step Three</strong></h3>
+            <p>Aldus Corporation, which later merged with Adobe Systems, ushered lorem ipsum into the information age
+              with its desktop publishing software Aldus PageMaker. </p>
+          </div>
+        </div>
+      </div>
+      <img src="images/wave4.svg" alt="wave4" style="width: 100%; position: absolute; margin: 95px -20px;">
+  </section>
+  <!-- End of Preparation Highlight -->
+
+  <!-- Start of TESTIMONIALS  -->
 
   <section class="ubo-block">
     <div class="container">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h1>This is about us</h1>
+      <div class="row justify-content-center">
+        <div class="col-12 text-left">
+          <h1>Testimonials</h1>
         </div>
       </div>
 
-      <div class="row text-left justify-content-center pt-5">
-        <div class="col-12 col-md-6 col-lg-5 m-auto">
-          <h3><strong>Their chosen by YOU</strong></h3>
-
-          <p class="lead"> Morbi porta porta malesuada. Praesent aliquet maximus diam, vel varius tellus ornare non.</p>
+      <div class="row text-left mt-5">
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto mr-md-auto ml-md-0" id="testimonial-block">
+          <img alt="image" class="testimonial-img rounded" src="images/testimonial_1.jpeg">
+          <div class="row">
+            <div class="col-2">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="col-10">
+              <h3><strong>Salaaaaad fix?</strong></h3>
+              <p>"Ubento has allowed me to enjoy emals, eat better and save money! I am not making
+                unnecessary side dishes. Every meals is quick and easy and
+                the food is delicious!!!! Plus a hit with the family."
+              </p>
+              <p class="lead"><strong>Catherine</strong></p>
+              <p>@catherine65</p>
+            </div>
+          </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-5 m-auto pt-3 pt-md-0">
-          <h3><strong>Never tire of few choices</strong></h3>
-
-          <p class="lead">Integer elit libero, luctus a ex nec, molestie semper mi. Proin in condimentum erat. Cras finibus fringilla nulla ac posuere..</p>
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto pt-5 pt-md-0" id="testimonial-block">
+          <img alt="image" class="testimonial-img rounded" src="images/testimonial_2.jpeg">
+          <div class="row">
+            <div class="col-2">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="col-10">
+              <h3><strong>For everyone</strong></h3>
+              <p> "My husband and daughter clean their plates every meal and tell me how delicious it was. And our financial budget has been cut in half. Honestly I love this company and I am so grateful for you.
+                Thank you so much."</p>
+              <p class="lead"><strong>Sheila</strong></p>
+              <p>@themerrymother</p>
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div class="row text-left justify-content-center pt-lg-4">
-        <div class="col-12 col-md-6 col-lg-5 m-auto pt-3 pt-lg-0">
-          <h3><strong>Feature Three</strong></h3>
-
-          <p class="lead">Morbi porta porta malesuada. Praesent aliquet maximus diam, vel varius tellus ornare non.</p>
-        </div>
-        <div class="col-12 col-md-6 col-lg-5 m-auto pt-3 pt-lg-0">
-          <h3><strong>Feature Four</strong></h3>
-
-          <p class="lead">Integer elit libero, luctus a ex nec, molestie semper mi. Proin in condimentum erat. Cras finibus fringilla nulla ac posuere.</p>
+        <div class="col-12 col-sm-8 col-md-4 col-lg-3 m-sm-auto ml-md-auto mr-md-0 pt-5 pt-md-0" id="testimonial-block">
+          <img alt="image" class="testimonial-img rounded" src="images/testimonial_3.jpeg">
+          <div class="row">
+            <div class="col-2">
+              <i class="bi bi-quote"></i>
+            </div>
+            <div class="col-10">
+              <h3><strong>Spoilt for choice!</strong></h3>
+              <p>"I really appreciate the variety of meals available and most of them are beautifully prepared. I also have had good experiences with customer service when oen of my orders is missing an ingredient or two." </p>
+              <p class="lead"><strong>Toni</strong></p>
+              <p>@suntanned21</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+<<<<<<< HEAD
   <!-- End of Value Proposition Section -->
 
         <!-- Start of Footer  -->
@@ -145,4 +347,115 @@
       </footer>
     
 </body>
+=======
+  <!-- END OF TESTIMONIALS -->
+
+  <!-- Start of Subscribe -->
+  <section class="ubo-block py-0" style="background-image: url(images/contactbg.svg); background-position: top;">
+    <div class="container py-5">
+      <div class="row text-center justify-content-center">
+        <div class="col-12 col-md-8 col-lg-7">
+          <h1>Subscribe & Ask away</h1>
+          <p class="lead">If you’re already an active user, please <a href="#">sign in</a> before
+            contacting us.</p>
+        </div>
+      </div>
+      <div class="row-50">
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-7">
+          <form>
+            <div class="row">
+              <div class="col">
+                <label>Your Email Address</label>
+                <input type="text" class="form-control">
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+                <label>Subject (optional but helpful)</label>
+                <input type="email" class="form-control">
+              </div>
+            </div>
+
+            <div class="row mt-4">
+              <div class="col">
+                <label>How can we help?</label>
+                <textarea class="form-control" name="message" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="row mt-4">
+              <div class="col text-right">
+                <button type="submit" class="btn btn-dark">Submit</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="row-100"></div>
+    </div>
+
+
+  </section>
+
+  <!-- End of Subscribe -->
+
+  <!-- Start of Footer  -->
+
+  <footer class="ubo-block footer-large">
+    <div class="container">
+      <div class="row align-items-center text-center">
+        <div class="col-12 col-lg-4 text-lg-left">
+          © 2022 Ubento
+        </div>
+
+        <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+          <img alt="image" src="images/ubento-logo-borderless.svg" height="40">
+        </div>
+
+        <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
+          <ul class="nav justify-content-lg-end justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col">
+          <h3>Ubento PTD</h3>
+          <p>100 High St.<br>Butteryellow Brick Road</p>
+          <p>Singapore</p>
+          <p>+65 0011 1100</p>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p class="lead">
+            <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+>>>>>>> dee6347430c260f83a5c6589d09941e08b96c139
 </html>
