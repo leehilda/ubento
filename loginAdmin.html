@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
+  <link type="text/css" rel="stylesheet" href="/css/style.css">
+  <title>Ubento</title>
+</head>
+      <style>
+        .login-container {
+        font-size: 20px;
+        color: #0000ff;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        padding: 20px; 
+        align-items: center;
+        justify-content: center;
+        text-align: center;}
+
+        .loginForm {
+        padding: 10px;
+        }
+        .login-container input{
+            border-radius: 5px;
+            border: 1px solid #0000ff;
+            border-style: solid;
+            margin-bottom: 20px;
+        }
+        .login-container p {
+          display: none;
+        }
+        
+      
+        .psw {
+            color: #FF4500;
+            cursor: pointer;
+        }
+
+       
+        
+
+      </style>
+      <body>
+        <!-- Start of Header -->
+  <header style="background-color: #FFBF00;">
+    <div class="container">
+      <nav class="navbar navbar-expand-md">
+        <div class="container-fluid">
+          <a href="#" class="navbar-brand">
+            <img src="images/ubento-logo-borderless.svg" height="50" alt="ubento-logo">
+          </a>
+          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation"> -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item active">
+                <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/bentos.html">Bentos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <img src="images/user-solid.svg" height="18">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+<!-- ENd of Header -->
+      
+    <!-- Start of Banner -->
+    <section class="ubo-block">
+        <div class="container" style="background-image: url(/images/hero-bg-light.svg); background-size: cover;">
+            <div class="row align-items-center">
+                <div class="col-12 ml-auto col-md-6 col-lg-5">
+                    <h1>Login</h1>
+                    <p class="lead">Welcome admin!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--End of banner -->
+    <!-- Value Proposition section -->
+
+    <section>
+        <form class="loginForm" method="post" id="login-form" onsubmit="event.preventDefault()">      
+            <div class="login-container container">
+              <p id="login-error-msg">Invalid username and/or password</p>
+              <label class="username" for="username"><b>Username</b></label>
+              <input type="text" id="username" name="username" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" id="password" name="password" required>
+          
+              <button id="login-form-submit" class="btn btn-primary btn-primary:hover" type="submit">Login</button>
+              
+              <label>
+                <input type="checkbox" checked="checked" id="remember" name="remember"> Remember me
+              </label>
+              <a class="popup">Forgot <span class="psw" data-bs-toggle="modal" data-bs-target="#contactModal">password?</span></a>
+            </div>
+          </form>
+
+    </section>
+    <!-- End of Value Proposition Section -->
+
+ <!-- Start of Footer  -->
+
+ <footer class="ubo-block footer-large">
+  <div class="container">
+    <div class="row align-items-center text-center">
+      <div class="col-12 col-lg-4 text-lg-left">
+        © 2022 Ubento
+      </div>
+
+      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+        <img alt="image" src="images/ubento-logo-borderless.svg" height="40">
+      </div>
+
+      <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
+        <ul class="nav justify-content-lg-end justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Privacy</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Terms</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <div class="container">
+    <div class="row text-center">
+      <div class="col">
+        <h3>Ubento PTD</h3>
+        <p>100 High St.<br>Butteryellow Brick Road</p>
+        <p>Singapore</p>
+        <p>+65 0011 1100</p>
+      </div>
+    </div>
+
+    <div class="row mt-4">
+      <div class="col text-center">
+        <p class="lead">
+          <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+          <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+    
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+              <form>
+                  <div class="mb-3">
+                      <label for="forgetpwEmail" class="form-label" required>Email address</label>
+                      <input type="email" class="form-control" id="forgetPwEmail" aria-describedby="emailHelp">
+                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                        <p></p>
+                      </div>
+                    </div>
+              </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button id ="btnSave" type="submit" class="btn btn-primary" >Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <script src="scripts\adminLogin.js"></script>
+      
+</body>
+
+</html>
