@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,43 +20,43 @@
   <link type="text/css" rel="stylesheet" href="/css/style.css">
   <title>Ubento</title>
 </head>
-      <style>
-        .login-container {
-        font-size: 20px;
-        color: #0000ff;
-        font-weight: bold;
-        display: flex;
-        flex-direction: column;
-        padding: 20px; 
-        align-items: center;
-        justify-content: center;
-        text-align: center;}
+<style>
+  .login-container {
+    font-size: 20px;
+    color: #0000ff;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-        .loginForm {
-        padding: 10px;
-        }
-        .login-container input{
-            border-radius: 5px;
-            border: 1px solid #0000ff;
-            border-style: solid;
-            margin-bottom: 20px;
-        }
-        .login-container p {
-          display: none;
-        }
-        
-      
-        .psw {
-            color: #FF4500;
-            cursor: pointer;
-        }
+  .loginForm {
+    padding: 10px;
+  }
 
-       
-        
+  .login-container input {
+    border-radius: 5px;
+    border: 1px solid #0000ff;
+    border-style: solid;
+    margin-bottom: 20px;
+  }
 
-      </style>
-      <body>
-        <!-- Start of Header -->
+  .login-container p {
+    display: none;
+  }
+
+
+  .psw {
+    color: #FF4500;
+    cursor: pointer;
+  }
+</style>
+
+<body>
+  <!-- Start of Header -->
   <header style="background-color: #FFBF00;">
     <div class="container">
       <nav class="navbar navbar-expand-md">
@@ -78,10 +79,10 @@
                 <a class="nav-link" href="/bentos.html">Bentos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/about.html">About Us</a>
+                <a class="nav-link" href="/aboutus.html">About Us</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/contact.html">Contact</a>
+                <a class="nav-link" href="/contactO.html">Contact</a>
               </li>
             </ul>
           </div>
@@ -89,7 +90,12 @@
             <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <img src="images/user-solid.svg" height="18">
+                  <i class="bi bi-person-fill"></i>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">
+                  <i class="bi bi-cart-fill"></i>
                 </a>
               </li>
             </ul>
@@ -98,123 +104,124 @@
       </nav>
     </div>
   </header>
-<!-- ENd of Header -->
-      
-    <!-- Start of Banner -->
-    <section class="ubo-block">
-        <div class="container" style="background-image: url(/images/hero-bg-light.svg); background-size: cover;">
-            <div class="row align-items-center">
-                <div class="col-12 ml-auto col-md-6 col-lg-5">
-                    <h1>Login</h1>
-                    <p class="lead">Welcome admin!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--End of banner -->
-    <!-- Value Proposition section -->
+  <!-- ENd of Header -->
 
-    <section>
-        <form class="loginForm" method="post" id="login-form" onsubmit="event.preventDefault()">      
-            <div class="login-container container">
-              <p id="login-error-msg">Invalid username and/or password</p>
-              <label class="username" for="username"><b>Username</b></label>
-              <input type="text" id="username" name="username" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" id="password" name="password" required>
-          
-              <button id="login-form-submit" class="btn btn-primary btn-primary:hover" type="submit">Login</button>
-              
-              <label>
-                <input type="checkbox" checked="checked" id="remember" name="remember"> Remember me
-              </label>
-              <a class="popup">Forgot <span class="psw" data-bs-toggle="modal" data-bs-target="#contactModal">password?</span></a>
+  <!-- Start of Banner -->
+  <section class="ubo-block">
+    <div class="container" style="background-image: url(/images/hero-bg-light.svg); background-size: cover;">
+      <div class="row align-items-center">
+        <div class="col-12 ml-auto col-md-6 col-lg-5">
+          <h1>Login</h1>
+          <p class="lead">Welcome admin!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--End of banner -->
+  <!-- Value Proposition section -->
+
+  <section>
+    <form class="loginForm" method="post" id="login-form" onsubmit="event.preventDefault()">
+      <div class="login-container container">
+        <p id="login-error-msg">Invalid username and/or password</p>
+        <label class="username" for="username"><b>Username</b></label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="psw"><b>Password</b></label>
+        <input type="password" id="password" name="password" required>
+
+        <button id="login-form-submit" class="btn btn-primary btn-primary:hover" type="submit">Login</button>
+
+        <label>
+          <input type="checkbox" checked="checked" id="remember" name="remember"> Remember me
+        </label>
+        <a class="popup">Forgot <span class="psw" data-bs-toggle="modal"
+            data-bs-target="#contactModal">password?</span></a>
+      </div>
+    </form>
+
+  </section>
+  <!-- End of Value Proposition Section -->
+
+  <!-- Start of Footer  -->
+
+  <footer class="ubo-block footer-large">
+    <div class="container">
+      <div class="row align-items-center text-center">
+        <div class="col-12 col-lg-4 text-lg-left">
+          © 2022 Ubento
+        </div>
+
+        <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+          <img alt="image" src="images/ubento-logo-borderless.svg" height="40">
+        </div>
+
+        <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
+          <ul class="nav justify-content-lg-end justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Privacy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Terms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row text-center">
+        <div class="col">
+          <h3>Ubento PTD</h3>
+          <p>100 High St.<br>Butteryellow Brick Road</p>
+          <p>Singapore</p>
+          <p>+65 0011 1100</p>
+        </div>
+      </div>
+
+      <div class="row mt-4">
+        <div class="col text-center">
+          <p class="lead">
+            <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="forgetpwEmail" class="form-label" required>Email address</label>
+              <input type="email" class="form-control" id="forgetPwEmail" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                <p></p>
+              </div>
             </div>
           </form>
-
-    </section>
-    <!-- End of Value Proposition Section -->
-
- <!-- Start of Footer  -->
-
- <footer class="ubo-block footer-large">
-  <div class="container">
-    <div class="row align-items-center text-center">
-      <div class="col-12 col-lg-4 text-lg-left">
-        © 2022 Ubento
-      </div>
-
-      <div class="col-12 col-lg-4 mt-4 mt-lg-0">
-        <img alt="image" src="images/ubento-logo-borderless.svg" height="40">
-      </div>
-
-      <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
-        <ul class="nav justify-content-lg-end justify-content-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#">Privacy</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Terms</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <br>
-  <br>
-  <div class="container">
-    <div class="row text-center">
-      <div class="col">
-        <h3>Ubento PTD</h3>
-        <p>100 High St.<br>Butteryellow Brick Road</p>
-        <p>Singapore</p>
-        <p>+65 0011 1100</p>
-      </div>
-    </div>
-
-    <div class="row mt-4">
-      <div class="col text-center">
-        <p class="lead">
-          <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-          <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
-          <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-          <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
-          <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
-        </p>
-      </div>
-    </div>
-  </div>
-</footer>
-    
-    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-body">
-              <form>
-                  <div class="mb-3">
-                      <label for="forgetpwEmail" class="form-label" required>Email address</label>
-                      <input type="email" class="form-control" id="forgetPwEmail" aria-describedby="emailHelp">
-                      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
-                        <p></p>
-                      </div>
-                    </div>
-              </form>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button id ="btnSave" type="submit" class="btn btn-primary" >Submit</button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="btnSave" type="submit" class="btn btn-primary">Submit</button>
         </div>
       </div>
     </div>
+  </div>
 
 
-      <script src="scripts\adminLogin.js"></script>
-      
+  <script src="scripts\adminLogin.js"></script>
+
 </body>
 
 </html>
