@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" /> -->
+
+    <link type="text/css" rel="stylesheet" href="/css/style.css">
+    <title>Ubento</title>
+</head>
+
+<body>
+    <style>
+        .input-group-text {
+            border-radius: 0;
+            height: 40px;
+        }
+
+        .form-group {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        select {
+            height: 40px;
+            border-color: grey;
+        }
+
+        .btn {
+            margin: 50px 0;
+        }
+
+        .validate {
+            margin-top: 8px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .textLabel {
+            width: 100%;
+        }
+
+        .addProdBtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .uploadImage img {
+            margin: 20px;
+            display: flex;
+        }
+    </style>
+    <!-- Start of Header -->
+    <header style="background-color: #FFBF00;">
+        <div class="container">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-fluid">
+                    <a href="#" class="navbar-brand">
+                        <img src="images/ubento-logo-borderless.svg" height="50" alt="ubento-logo">
+                    </a>
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation"> -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/bentos.html">Bentos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/aboutus.html">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/contactO.html">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-person-fill"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">
+                                    <i class="bi bi-cart-fill"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- addProduct(name, category, details, price, imageURL) 
+  {   
+      const productItem = 
+      {
+          name: name,
+          category: category,
+          details: details,
+          price: price,
+          imageURL: imageURL
+      }
+
+      this.allProductItems.push(productItem);
+
+  } -->
+    <div class="ubo-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1>Product Database</h1>
+                </div>
+            </div>
+            <table>
+
+                <tr>
+                    <td>
+                        <form onsubmit="event.preventDefault();onFormSubmit();" autocomplete="off">
+                            <div>
+                                <label>Product Name*</label><label class="validation-error hide"
+                                    id="nameValidationError">This field is required.</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div>
+                                <label>Category</label>
+                                <input type="text" name="category" id="category">
+                            </div>
+                            <div>
+                                <label>details</label>
+                                <input type="text" name="details" id="details">
+                            </div>
+                            <div>
+                                <label>price</label>
+                                <input type="text" name="price" id="price">
+                            </div>
+                            <div>
+                                <label>Image URL</label>
+                                <input type="text" name="imageURL" id="imageURL">
+                            </div>
+                            <div class="form-action-buttons">
+                                <input type="submit" value="Submit">
+                            </div>
+                        </form>
+                    </td>
+                    <td>
+                        <table class="list" id="productList">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Category</th>
+                                    <th>Details</th>
+                                    <th>Price</th>
+                                    <th>Image URL</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container px-10">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 gy-5" id="itemize">
+
+    </div>
+    </div>
+
+
+    <!-- Start of Footer  -->
+    <footer class="ubo-block footer-large">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-12 col-lg-4 text-lg-left">
+                    © 2022 Ubento
+                </div>
+
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                    <img alt="image" src="images/ubento-logo-borderless.svg" height="40">
+                </div>
+
+                <div class="col-12 col-lg-4 text-lg-right mt-4 mt-lg-0">
+                    <ul class="nav justify-content-lg-end justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Privacy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Terms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row text-center">
+                <div class="col">
+                    <h3>Ubento PTD</h3>
+                    <p>100 High St.<br>Butteryellow Brick Road</p>
+                    <p>Singapore</p>
+                    <p>+65 0011 1100</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="lead">
+                        <a href="#" class="mx-2"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                        <a href="#" class="mx-2"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                        <a href="#" class="mx-2"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                        <a href="#" class="mx-2"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                        <a href="#" class="mx-2"><i class="fab fa-google" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts/productController.js"></script>
+    <script src="scripts/displayProduct.js"></script>
+    <!-- <script src="scripts/AdminProductsController.js"></script> -->
+    <script src="scripts/productDb.js"></script>
+
+
+</body>
+
+</html>
