@@ -6,10 +6,6 @@
 /* --------------- addProduct() --------------- */
 
     products.addProduct(
-        //id
-        1001,
-        //imageURL
-        "images/bentos/Product1.png", 
         //name
         "Garden Salad", 
         //category
@@ -17,14 +13,12 @@
         //details
         "Tomato, Lettuce, Mango, Brocolli Florets, Sesame Toppings",
         //price
-        12.00
+        12.00,
+        //imageURL
+        "images/bentos/Product1.png"
     );
 
     products.addProduct(
-        //id
-        1002,
-        //imageURL
-        "images/bentos/Product2.png", 
         //name
         "Vitamin V", 
         //category
@@ -32,14 +26,12 @@
         //details
         "Cucumber, Leek, Carrots, Tomatoes and Capsicum",
         //price
-        9.50
+        9.50,
+        //imageURL
+        "images/bentos/Product2.png"
     );
 
     products.addProduct(
-        //id
-        1003,
-        //imageURL
-        "images/bentos/Product3.png", 
         //name
         "Afternoon Booster", 
         //category
@@ -47,14 +39,12 @@
         //details
         "Lettuce, Strawberry, Ricotta, Aglio olio orecchiette",
         //price
-        10.50
+        10.50,
+        //imageURL
+        "images/bentos/Product3.png"
     );
 
     products.addProduct(
-        //id
-        1004,
-        //imageURL
-        "images/bentos/Product4.png", 
         //name
         "Classic Basic", 
         //category
@@ -62,14 +52,12 @@
         //details
         "Baked Seasalt Chicken Breast with Roasted and Peppered Potatoes with White Rice",
         //price
-        13.00
+        13.00,
+        //imageURL
+        "images/bentos/Product4.png"
     );
 
     products.addProduct(
-        //id
-        1005,
-        //imageURL
-        "images/bentos/Product5.png", 
         //name
         "Prawn Fiesta", 
         //category
@@ -77,14 +65,12 @@
         //details
         "Green Peas, Olives, Corn, Tomatoes, Shrimp, Olive Oil",
         //price
-        14.50
+        14.50,
+        //imageURL
+        "images/bentos/Product5.png"
     );
 
     products.addProduct(
-        //id
-        1006,
-        //imageURL
-        "images/bentos/Product6.png", 
         //name
         "Shrimp Fiesta", 
         //category
@@ -92,14 +78,12 @@
         //details
         "Spaghetti, Shrimp, Egg, Olives, Lettuce, Tomatoes",
         //price
-        17.00
+        17.00,
+        //imageURL
+        "images/bentos/Product6.png"
     );
 
     products.addProduct(
-        //id
-        1007,
-        //imageURL
-        "images/bentos/Product7.png", 
         //name
         "Kidz Starter", 
         //category
@@ -107,14 +91,12 @@
         //details
         "Eggs, Cheese, Cucumber, Tomatoes, Rice",
         //price
-        12.00
+        12.00,
+        //imageURL
+        "images/bentos/Product7.png"
     );
 
     products.addProduct(
-        //id
-        1008,
-        //imageURL
-        "images/bentos/Product8.png", 
         //name
         "Kidz Booster", 
         //category
@@ -122,14 +104,12 @@
         //details
         "Brocolli, Egg, Quail Eggs, Tomatoes, Cheese",
         //price
-        12.50
+        12.50,
+        //imageURL
+        "images/bentos/Product8.png"
     );
 
     products.addProduct(
-        //id
-        1009,
-        //imageURL
-        "images/bentos/Product9.png", 
         //name
         "Fun Lunch", 
         //category
@@ -137,14 +117,12 @@
         //details
         "Tomatoes, Rice, Beans, Butter, Egg Omellete",
         //price
-        9.50
+        9.50,
+        //imageURL
+        "images/bentos/Product9.png"
     );
 
     products.addProduct(
-        //id
-        1010,
-        //imageURL
-        "images/bentos/Product10.png", 
         //name
         "Complete Lunch", 
         //category
@@ -152,14 +130,12 @@
         //details
         "Rice, Shrimp, Corn Peas, Carrots",
         //price
-        13.00
+        13.00,
+        //imageURL
+        "images/bentos/Product10.png"
     );
 
-    products.addProduct(
-        //id
-        1011,
-        //imageURL
-        "images/bentos/Product11.png", 
+    products.addProduct( 
         //name
         "Toddler Takeaway", 
         //category
@@ -167,14 +143,12 @@
         //details
         "Toamtoes, Rice, Brocolli, Toamtoes, Corn, Olives, Lettuce",
         //price
-        12.00
+        12.00,
+        //imageURL
+        "images/bentos/Product11.png"
     );
 
     products.addProduct(
-        //id
-        1012,
-        //imageURL
-        "images/bentos/Product12.png", 
         //name
         "Guilt-Free Snacker", 
         //category
@@ -182,14 +156,12 @@
         //details
         "Ham, Rice, Peas, Peas, Egg",
         //price
-        10.50
+        10.50,
+        //imageURL
+        "images/bentos/Product12.png"
     );
 
     products.addProduct(
-        //id
-        9999,
-        //imageURL
-        "images/bentos/productCustom.png", 
         //name
         "Create Your Own Bento", 
         //category
@@ -197,7 +169,9 @@
         //details
         "Will add the codes for ingredient selections later",
         //price
-        15.00
+        15.00,
+        //imageURL
+        "images/bentos/productCustom.png"
     );
 
 /* --------------- Methods/Functions --------------- */
@@ -221,7 +195,9 @@
 
     }
 
-//Setup the function for the search product button
+//Setup search function for the user by clicking on the search button or pressing the enter key
+
+//1) Search with button function
 
     function searchButtonClicked() {
 
@@ -230,3 +206,24 @@
 
     }
 
+//2) Search with enter key
+
+    // Get the user's input field from the search bar
+    let searchField = document.getElementById("searchText");
+
+    // Execute a function when the user presses a key on the keyboard
+    searchField.addEventListener("keypress", function(event) {
+
+        // If the user presses the "Enter" key on the keyboard
+        if (event.key === "Enter") {
+
+            // Cancel the default action, if needed
+            event.preventDefault();
+
+            // Trigger the button element with a click
+            document.getElementById("btnSearch").click();
+
+            // Clear input field after performing search
+            searchField.value = "";
+        }
+    });

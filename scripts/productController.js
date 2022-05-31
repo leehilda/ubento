@@ -11,16 +11,15 @@ class ProductController {
 
     //addProduct method
 
-        addProduct(id, imageURL, name, category, details, price) 
+        addProduct(name, category, details, price, imageURL) 
         {   
             const productItem = 
             {
-                id: id,
-                imageURL: imageURL,
                 name: name,
                 category: category,
                 details: details,
-                price: price
+                price: price,
+                imageURL: imageURL
             }
 
             this.allProductItems.push(productItem);
@@ -66,7 +65,7 @@ class ProductController {
                     </div>
                 </div>
                 `    
-                
+
             });
         
             document.getElementById("row").innerHTML = showProductItem;
@@ -118,8 +117,8 @@ class ProductController {
 //Display product array information on product modal
 function displayItemDetail(item) {
 	document.querySelector("#itemTitle").innerHTML = item.name;
-	document.querySelector("#itemImage").src = item.imageURL;
 	document.querySelector("#itemCategory").innerHTML = item.category;
     document.querySelector("#itemDetails").innerHTML = item.details;
 	document.querySelector("#itemPrice").innerHTML = `$ ${item.price.toFixed(2)}`;
+    document.querySelector("#itemImage").src = item.imageURL;
 }
