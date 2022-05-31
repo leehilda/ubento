@@ -90,7 +90,7 @@ class ProductController {
                 <td>${productItem.category}</td>
                 <td>${productItem.details}</td>
                 <td>${productItem.price}</td>
-                <td>${productItem.imageURL}</td>
+                <td><img src=${productItem.imageURL} width=100px height=auto></td>
                 <td><a onClick="onEdit(this)">Edit</a>
                 <a onClick="onDelete(this)">Delete</a></td>
                 </tr>
