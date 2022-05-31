@@ -36,7 +36,7 @@ function insertNewRecord(data) {
     cell5.innerHTML = data.imageURL;
     cell5 = newRow.insertCell(5);
     cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-    <a onClick="onDelete(this)">Delete</a>`;
+    <a onClick="onDelete(this)">Delete</a>`;f
 }
 
 function resetForm() {
