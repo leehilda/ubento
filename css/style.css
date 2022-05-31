@@ -2067,7 +2067,7 @@ margin-bottom: 1.5rem;
 }
 
 .cart-item-name {
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   font-weight: 600;
   font-size: 1.25rem;
   line-height: 1;
