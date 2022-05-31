@@ -177,8 +177,17 @@
 /* --------------- Methods/Functions --------------- */
 
 //First launch is to display all products
-    products.displayAdminProductsTable();
+
+const windowLoc = location.href; //To get the window location URL
+
+//Execute for bentos product page
+if (windowLoc.includes("/bentos.html")) {
     products.displayProduct("All");
+}
+//Execute for product database page
+else if (windowLoc.includes("/productDb.html")) {
+    products.displayAdminProductsTable();
+}
 
 //Setup the EventListener for all the product category buttons
 
@@ -201,8 +210,12 @@
 
     function searchButtonClicked() {
 
-        let searchInput = document.getElementById("searchText").value;    //Return user's input from the search bar
+        //Return user's input from the search bar
+        let searchInput = document.getElementById("searchText").value;
         products.searchProduct(searchInput);
+
+        // Clear input field after performing search
+        clearInput();
 
     }
 
@@ -223,7 +236,9 @@
             // Trigger the button element with a click
             document.getElementById("btnSearch").click();
 
-            // Clear input field after performing search
-            searchField.value = "";
         }
     });
+
+    function clearInput() {
+        searchField.value = "";
+    }
