@@ -21,7 +21,7 @@
         let showItem = "";
         this.allItems.forEach (item => {     
             showItem +=
-                    // <!-- item card -->
+                    // <!-- item card-->
             `
                 <div class="col">
                   <div class="item-card">

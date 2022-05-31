@@ -79,6 +79,27 @@ class ProductController {
         
         }
 
+        displayAdminProductsTable() {
+            let insertProduct = "";
+            this.allProductItems.forEach (productItem => {     
+                insertProduct +=
+                        // <!-- product item row-->
+                `
+                <tr>
+                <td>${productItem.name}</td>
+                <td>${productItem.category}</td>
+                <td>${productItem.details}</td>
+                <td>${productItem.price}</td>
+                <td>${productItem.imageURL}</td>
+                <td><a onClick="onEdit(this)">Edit</a>
+                <a onClick="onDelete(this)">Delete</a></td>
+                </tr>
+                `
+    
+            });
+            document.getElementById("productList").getElementsByTagName('tbody')[0].innerHTML =  insertProduct;
+        }
+
     //filterProduct Method
     
         filterProduct(getSelectedCategory) 

@@ -1,7 +1,72 @@
+// class AdminProductsController {
+
+//     constructor() {
+//         this.AdminProducts = [];
+//     }
+
+//     //methods
+
+//     addProduct(name, category, details, price, imageURL) {
+
+//         //we will edit the methods when we have done our own API in Java
+//         const product = {
+//             name: name,
+//             category: category,
+//             details: details,
+//             price: price,
+//             imageURL: imageURL
+//         }
+//         this.AdminProducts.push(product);
+//     }
+
+//     displayAdminProducts() {
+//         let insertProduct = "";
+//         this.AdminProducts.forEach (product => {     
+//             insertProduct +=
+//                     // <!-- item card-->
+//             `
+//                 <div class="col">
+//                   <div class="item-card">
+//                     <img src="${product.imageURL}" class="img-fluid item-img">
+//                     <h4 class="item-name">${product.name}</h2>
+//                     <span class="item-price">${product.price}</span>
+//                     <span><i class="bi bi-cart-plus-fill addToCart" id="${product.category}"></i></span>
+//                   </div>
+//                 </div>      
+//             `
+
+//         });
+//         document.getElementById("itemize").innerHTML =  insertProduct;
+//     }
+
+//     displayAdminProductsTable() {
+//         let insertProduct = "";
+//         this.AdminProducts.forEach (product => {     
+//             insertProduct +=
+//                     // <!-- product item row-->
+//             `
+//             <tr>
+//             <td>${product.name}</td>
+//             <td>${product.category}</td>
+//             <td>${product.details}</td>
+//             <td>${product.price}</td>
+//             <td>${product.imageURL}</td>
+//             <td><a onclick="onEdit(this)" id="editBtn">Edit</a>
+//             <a onclick="onDelete(this)" id="deleteBtn">Delete</a></td>
+//             </tr>
+//             `
+
+//         });
+//         document.getElementById("productList").getElementsByTagName('tbody')[0].innerHTML =  insertProduct;
+//     }
+
+// }
+
+
 
 //An instance of the ProductController class object
 
-    const products = new ProductController();   //For product menu
+const products = new ProductController();   //For product menu
 
 /* --------------- addProduct() --------------- */
 
@@ -174,56 +239,8 @@
         "images/bentos/productCustom.png"
     );
 
-/* --------------- Methods/Functions --------------- */
+/* --------------- Display Product Rows--------------- */
 
-//First launch is to display all products
-    products.displayAdminProductsTable();
-    products.displayProduct("All");
 
-//Setup the EventListener for all the product category buttons
-
-    const categories = document.getElementsByClassName("btnFilter");    //Return 7 HTML elements in an array
-
-    for (let i=0;i<categories.length;i++)
-    {
-        categories[i].addEventListener("click", categoryClicked);
-    }    
-
-    function categoryClicked(event) {
-
-        products.filterProduct(event.target.innerText);
-
-    }
-
-//Setup search function for the user by clicking on the search button or pressing the enter key
-
-//1) Search with button function
-
-    function searchButtonClicked() {
-
-        let searchInput = document.getElementById("searchText").value;    //Return user's input from the search bar
-        products.searchProduct(searchInput);
-
-    }
-
-//2) Search with enter key
-
-    // Get the user's input field from the search bar
-    let searchField = document.getElementById("searchText");
-
-    // Execute a function when the user presses a key on the keyboard
-    searchField.addEventListener("keypress", function(event) {
-
-        // If the user presses the "Enter" key on the keyboard
-        if (event.key === "Enter") {
-
-            // Cancel the default action, if needed
-            event.preventDefault();
-
-            // Trigger the button element with a click
-            document.getElementById("btnSearch").click();
-
-            // Clear input field after performing search
-            searchField.value = "";
-        }
-    });
+products.displayAdminProductsTable();
+// products.displayAdminProducts();
