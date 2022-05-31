@@ -91,8 +91,8 @@ class ProductController {
                 <td>${productItem.details}</td>
                 <td>${productItem.price}</td>
                 <td>${productItem.imageURL}</td>
-                <td><button id="editBtn"><a onclick="onEdit(this)" >Edit</a></button>
-                <button id="deleteBtn"<a onclick="onDelete(this)">Delete</a></button></td>
+                <td><a onClick="onEdit(this)">Edit</a>
+                <a onClick="onDelete(this)">Delete</a></td>
                 </tr>
                 `
     
