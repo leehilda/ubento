@@ -235,10 +235,9 @@ else if (windowLoc.includes("/productDb.html")) {
 
             // Trigger the button element with a click
             document.getElementById("btnSearch").click();
-
         }
     });
 
     function clearInput() {
-        searchField.value = "";
+        document.getElementById("searchText").value = "";
     }
