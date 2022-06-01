@@ -67,6 +67,7 @@ function checkOutButtonClicked() {
 
 //event for delete from Cart button
 function deleteCartItem(event) {
+    cartBadgeUpdate();
     let buttonClicked = event.target;
     let cartItem = buttonClicked.closest(".container");
     cartItem.remove();
@@ -119,11 +120,13 @@ function addItemToCart(bentoItemName, bentoItemPrice, bentoItemImg) {
     let cartItems = document.getElementsByClassName("cart-list")[0];
     let cartItemsNames = cartItems.getElementsByClassName("cart-item-name");
     for (let i = 0; i < cartItemsNames.length; i++) {
-        if (bentoItemName === cartItemsNames[i].innerText) {
-            alert("That Bento is already in your cart.");
+        if (cartItemsNames[i].innerText == bentoItemName) {
+            alert(`${bentoItemName} is already in your cart.`);
             return;
-        }
+        } 
     }
+
+
 
     let cartAddedItem = `
                     <div class="row gy-5 cart-item">
@@ -136,7 +139,7 @@ function addItemToCart(bentoItemName, bentoItemPrice, bentoItemImg) {
                         <div class="col"><i class="bi bi-trash-fill cart-item-delete"></i></div>
                         <!-- </div> -->
                         </div>`;
-
+         
     cartItemsContainer.innerHTML = cartAddedItem;
     cartItems.append(cartItemsContainer);
     cartItemsContainer.getElementsByClassName("cart-item-delete")[0].addEventListener("click", deleteCartItem);
@@ -160,9 +163,11 @@ function getCartTotalAmount() {
         total = total + price * quantity;
         total = Math.round(total * 100) / 100; //for price with cents  value
         document.getElementsByClassName("total-amount")[0].innerText = "$" + total;
+        cartBadgeUpdate();
     }
     total = Math.round(total * 100) / 100; //for price with cents  value
     document.getElementsByClassName("total-amount")[0].innerText = "$" + total;
+    cartBadgeUpdate();
 }
 
 
