@@ -38,7 +38,7 @@ class ProductController {
 
             //Displayed products result = 1) by default, show all categories, 2) else if search bar contains input, filter based on search input value, 3) else filter based on the filter button selected
             if (category == "All") { getProduct = this.allProductItems; }
-            else if (!this.searchCategory == "") { getProduct = this.searchCategory; }
+            else if (document.getElementById("searchText").value != "") { getProduct = this.searchCategory; }
             else  { getProduct = this.filterCategory; }
 
             getProduct.forEach ((item, index) => {
@@ -98,7 +98,7 @@ class ProductController {
     
             });
             document.getElementById("productList").getElementsByTagName('tbody')[0].innerHTML =  insertProduct;
-        }
+        }      
 
     //filterProduct Method
     
@@ -110,7 +110,7 @@ class ProductController {
 
             //1) Based on the getSelectedCategory, do an Array filter method to check if an item category == getSelectedCategory
             this.filterCategory = this.allProductItems.filter(productItem => productItem.category.includes(getSelectedCategory));
-            console.log(this.filterCategory);
+            //console.log(this.filterCategory);
 
             //2) Display the filtered category items
             this.displayProduct(getSelectedCategory);
@@ -125,13 +125,13 @@ class ProductController {
 
             //1) Based on the getSearchInput, do an Array filter method to check if an item category == getSearchInput
             this.searchCategory = this.allProductItems.filter(productItem => productItem.category.toLowerCase().includes(getSearchInput.toLowerCase()));
-            console.log(this.searchCategory);
+            //console.log(this.searchCategory);
 
             //2) Display the filtered category items
             this.displayProduct(getSearchInput);
 
         }
-        
+
 } //End of ProductController class
 
 
