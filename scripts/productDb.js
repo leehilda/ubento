@@ -1,7 +1,7 @@
 var selectedRow = null
 
 function onFormSubmit() {
-    if (validate()) {
+    if (validate() && numCheck()) {
         var formData = readFormData();
         if (selectedRow == null)
             insertNewRecord(formData);
@@ -39,8 +39,8 @@ function insertNewRecord(data) {
     cell5.innerHTML = productImage;
     // cell5.innerHTML = productImage;
     cell5 = newRow.insertCell(5);
-    cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-    <a onClick="onDelete(this)">Delete</a>`;
+    cell5.innerHTML = `<button class = "btn-warning" onClick="onEdit(this)">Edit</button>
+    <button class = "btn-warning onClick="onDelete(this)">Delete</button>`; //Hilda edit here
 }
 
 function resetForm() {
@@ -86,4 +86,25 @@ function validate() {
             document.getElementById("nameValidationError").classList.add("hide");
     }
     return isValid;
+
 }
+
+function numCheck(){
+
+    let priceValidation = document.getElementById("price").value;
+    let check = /\d/g    
+    let result = check.test(priceValidation);
+
+    if(result == false){
+        document.getElementById('checkNum').innerHTML = "Invalid! Insert Number!";
+        return false;
+    } else {
+        document.getElementById('checkNum').innerHTML = "";
+        return true;
+        
+    }
+    
+}
+
+
+    

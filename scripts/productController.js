@@ -89,12 +89,12 @@ class ProductController {
                 <td>${productItem.name}</td>
                 <td>${productItem.category}</td>
                 <td>${productItem.details}</td>
-                <td>${productItem.price}</td>
-                <td><img src=${productItem.imageURL} width=100px height=auto></td>
-                <td><a onClick="onEdit(this)">Edit</a>
-                <a onClick="onDelete(this)">Delete</a></td>
+                <td>$${productItem.price}</td>
+                <td><img src= ${productItem.imageURL} height= 200px width= 200px></td>
+                <td><button class ="btn-warning" onClick="onEdit(this)">Edit</button>
+                <button class ="btn-warning" onClick="onDelete(this)">Delete</a></button>
                 </tr>
-                `
+                ` //Hilda edit here
     
             });
             document.getElementById("productList").getElementsByTagName('tbody')[0].innerHTML =  insertProduct;
