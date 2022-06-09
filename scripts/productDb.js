@@ -92,7 +92,7 @@ function validate() {
 function numCheck(){
 
     let priceValidation = document.getElementById("price").value;
-    let check = /\d/g    
+    let check = /(\d\.\d{1,2})$/g   
     let result = check.test(priceValidation);
 
     if(result == false){
