@@ -47,6 +47,15 @@
   .login-container p {
     display: none;
   }
+  input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
 
   .psw {
@@ -59,51 +68,51 @@
   <!-- Start of Header -->
   <header style="background-color: #FFBF00;">
     <div class="container">
-      <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-          <a href="#" class="navbar-brand">
-            <img src="images/ubento-logo-borderless.svg" height="50" alt="ubento-logo">
-          </a>
-          <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation"> -->
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item active">
-                <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/bentos.html">Bentos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/aboutus.html">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/contactO.html">Contact</a>
-              </li>
-            </ul>
-          </div>
-          <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-person-fill"></i>
+        <nav class="navbar navbar-expand-md">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="images/ubento-logo-borderless.svg" height="50" alt="ubento-logo">
                 </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                  <i class="bi bi-cart-fill"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse-1" aria-controls="navbarNav6" aria-expanded="false" aria-label="Toggle navigation"> -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/bentos.html">Bentos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus.html">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contactO.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/loginAdmin.html">
+                                <i class="bi bi-person-fill"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <i class="bi bi-cart-fill"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </div>
-  </header>
+</header>
   <!-- ENd of Header -->
 
   <!-- Start of Banner -->
@@ -130,10 +139,10 @@
         <label for="psw"><b>Password</b></label>
         <input type="password" id="password" name="password" required>
 
-        <button id="login-form-submit" class="btn btn-primary btn-primary:hover" type="submit">Login</button>
+        <button id="login-form-submit" class="btn btn-primary btn-primary:hover" type="submit" onclick="rememberMe()">Login</button>
 
         <label>
-          <input type="checkbox" checked="checked" id="remember" name="remember"> Remember me
+          <input type="checkbox" checked="checked" id="remember" name="remember" value = "rememberMe"> Remember me
         </label>
         <a class="popup">Forgot <span class="psw" data-bs-toggle="modal"
             data-bs-target="#contactModal">password?</span></a>

@@ -19,7 +19,7 @@ loginButton.addEventListener('click', loginCheck);
 
         if (username == "admin" && password == "123456") 
         {
-            location.replace("adminPage.html")
+            location.replace("productDb.html")
         } else {
             document.querySelector("#login-error-msg").style.display = "block"; 
             
@@ -51,30 +51,31 @@ function sendEmail() {
     } else {
         displayMessage.innerHTML = "error"
         clearInput()
-}
     }
+}
     
 
-// const rmCheck = document.getElementById("remember")
+ const rmCheck = document.getElementById("remember")
     
 
-// if (localStorage.checkbox && localStorage.checkbox !== "") {
-//   rmCheck.setAttribute("checked", "checked");
-//   username.value = localStorage.username;
-// } else {
-//   rmCheck.removeAttribute("checked");
-//   username.value = "";
-// }
+if (localStorage.checkbox && localStorage.checkbox !== "") {
+  rmCheck.setAttribute("checked", "checked");
+  username.value = localStorage.username;
+  password.value = localStorage.password;
+} else {
+  rmCheck.removeAttribute("checked");
+  username.value = "";
+}
 
-// console.log(rmCheck)
-
-// function lsRememberMe() {
-//   if (rmCheck.checked && username.value !== "") {
-//     localStorage.username = username.value;
-//     localStorage.checkbox = rmCheck.value;
-//   } else {
-//     localStorage.username = "";
-//     localStorage.checkbox = "";
-//   }
-// }
+function rememberMe() {
+  if (rmCheck.checked && username.value !== "") {
+    localStorage.username = username.value;
+    localStorage.password = password.value;
+    localStorage.checkbox = rmCheck.value;
+  } else {
+    localStorage.username = "";
+    localStorage.password = "";
+    localStorage.checkbox = "";
+  }
+}
 
