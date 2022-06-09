@@ -33,10 +33,14 @@ function insertNewRecord(data) {
     cell4 = newRow.insertCell(3);
     cell4.innerHTML = data.price;
     cell5 = newRow.insertCell(4);
-    cell5.innerHTML = data.imageURL;
+    const productImage = document.createElement('img'); //todo to include width and height preset sizes
+    productImage.src = `<img src="${data.imageURL}" width="100px" height="auto">`;
+    // cell5.innerHTML = productImage.setAttribute('src', `'${data.imageURL}'`);
+    cell5.innerHTML = productImage;
+    // cell5.innerHTML = productImage;
     cell5 = newRow.insertCell(5);
     cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-    <a onClick="onDelete(this)">Delete</a>`;f
+    <a onClick="onDelete(this)">Delete</a>`;
 }
 
 function resetForm() {
@@ -54,7 +58,7 @@ function onEdit(td) {
     document.getElementById("category").value = selectedRow.cells[1].innerHTML;
     document.getElementById("details").value = selectedRow.cells[2].innerHTML;
     document.getElementById("price").value = selectedRow.cells[3].innerHTML;
-    document.getElementById("imageURL").value = selectedRow.cells[3].innerHTML;
+    document.getElementById("imageURL").value = selectedRow.cells[4].innerHTML;
 }
 function updateRecord(formData) {
     selectedRow.cells[0].innerHTML = formData.name;

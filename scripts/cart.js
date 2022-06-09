@@ -157,8 +157,8 @@ function getCartTotalAmount() {
     for (let i = 0; cartItems.length; i++) {
         let cartItem = cartItems[i];
         let cartItemPrice = cartItem.getElementsByClassName("cart-item-price")[0];
-        let cartQuantity = cartItem.getElementsByClassName("cart-item-quantity")[0];
         let price = parseFloat(cartItemPrice.innerText.replace("$", ""));
+        let cartQuantity = cartItem.getElementsByClassName("cart-item-quantity")[0];
         let quantity = cartQuantity.value;
         total = total + price * quantity;
         total = Math.round(total * 100) / 100; //for price with cents  value
